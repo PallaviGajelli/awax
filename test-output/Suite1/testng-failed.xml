@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
+  <test name="TestonIE(failed)">
+    <parameter name="BrowserName" value="IE"/>
+    <classes>
+      <class name="registration.trial">
+        <methods>
+          <include name="Setup"/>
+          <include name="tearDown"/>
+          <include name="TC_Registration_001"/>
+        </methods>
+      </class> <!-- registration.trial -->
+    </classes>
+  </test> <!-- TestonIE(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

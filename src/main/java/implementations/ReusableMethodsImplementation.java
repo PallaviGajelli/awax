@@ -73,11 +73,11 @@ public abstract class ReusableMethodsImplementation implements GenericActions{
 		}
 		if (browserName.equalsIgnoreCase("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", prop.getProperty("FirefoxDriver"));
+			
 			driver = new FirefoxDriver();
 		}
 		if (browserName.equalsIgnoreCase("ie"))
-		{
+		{ 
 			driver = new InternetExplorerDriver();
 		}
 		return driver;

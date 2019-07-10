@@ -15,20 +15,21 @@ public class SQLconnector {
 		try
 		{
 		//Connection URL Syntax: "jdbc:mysql://ipaddress:portnumber/db_name"		
-        String dbUrl = "jdbc:mysql://localhost:3306/login_db?useSSL=false";					
+        String dbUrl = "jdbc:mysql://aa1sbby8pqpky99.c4q7z9w8jisl.us-east-1.rds.amazonaws.com:3306/ebdb?useSSL=false";					
 
 		//Database Username		
-		String username = "root";	
+		String username = "adminabu";	
         
 		//Database Password		
-		String password = "swindon19";				
+		String password = "Awax1357.";				
 
-		//Query to Execute		
-		String query = "select *  from login_table;";	
+		//Query to Execute	
+		//gajelli.p@awax.co.uk = 15
+		String query = "select 2fa_pin from twofactor where 2fa_user=15;";	
 			
 		
  	    //Load mysql jdbc driver		
-   	    Class.forName("com.mysql.jdbc.Driver");			
+   	    Class.forName("com.mysql.cj.jdbc.Driver");		//com.mysql.jdbc.Driver
    
    		//Create Connection to DB		
     	Connection con = DriverManager.getConnection(dbUrl,username,password);
@@ -38,14 +39,17 @@ public class SQLconnector {
 	   java.sql.Statement stmt = con.createStatement();					
 
 			// Execute the SQL Query. Store results in ResultSet		
- 		ResultSet rs= stmt.executeQuery(query);							
+ 		ResultSet rs= stmt.executeQuery(query);	
+ 		
+ 		//System.out.println("PIN:"+rs.getInt(1));
  
  		// While Loop to iterate through all data and print results		
 		while (rs.next()){
-	        		int myid = rs.getInt(1);	
-	        		String myName = rs.getString(2);
-                    String pwd = rs.getString(3);					                               
-                    System. out.println(myid+" "+myName+"  "+pwd);		
+	        		int PIN = rs.getInt(1);
+	        		System.out.println("PIN:"+PIN);
+	        		//String myName = rs.getString(2);
+                    //String pwd = rs.getString(3);					                               
+                   // System. out.println(myid+" "+myName+"  "+pwd);		
             }		
 			 // closing DB Connection		
 			con.close();			

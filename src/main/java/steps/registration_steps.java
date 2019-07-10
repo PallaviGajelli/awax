@@ -6,9 +6,10 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
 public class registration_steps {
-
+//check UI of the registration Page.
 	public static void TC_Registration_002(WebDriver driver, ExtentTest logger, ExtentReports report) {
-		
+		Launch_Awax();
+		Validate_RegistrationPage();
 //		you should be able to see foloowing webElements
 //		1. private and Institutional tabs
 //		2. under Private section we should have 
@@ -24,14 +25,18 @@ public class registration_steps {
 	}
 
 	public static void TC_Registration_003(WebDriver driver, ExtentTest logger, ExtentReports report) {
-//		1. Launch Awax.co.uk
-//		2.do not fill in any fields
-//		3. click on register
+		Launch_Awax();
+//		check for all WebElements for their desired input .
+//		Title must be -Mr,Mrs,Miss.
+//		Name and last can accept all alphabets.
+//		emailID must take all the alphabets and numbers and @.
+//		Password and retype password must take all the input char.
 		
 	}
 
 	public static void TC_Registration_004(WebDriver driver, ExtentTest logger, ExtentReports report) {
 //		1. Launch Awax.co.uk
+		Launch_Awax();
 //		2.do not fill in any fields
 //		3. click on register
 		
